@@ -9583,3 +9583,8 @@ a.text-dark:hover, a.text-dark:focus {
     transform: translateY(-15px);
   }
 }
+.carousel-img {
+  width: 100%;
+  height: 500px; /* Set a fixed height for consistency */
+  object-fit: cover; /* This will ensure the image fills the space while maintaining aspect ratio */
+}

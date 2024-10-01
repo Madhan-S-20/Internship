@@ -7,7 +7,11 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textile Shop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -116,7 +120,7 @@
                         <a href="" class="nav-item nav-link">Mysore Silk Saree</a>
                         <a href="" class="nav-item nav-link">Kanjivaram Silk Saree</a>
                         <a href="" class="nav-item nav-link">Chiffon Saree</a>
-                        <a href="" class="nav-item nav-link">kanchipuram Saree</a>
+                        <a href="" class="nav-item nav-link">Kanchipuram Saree</a>
                     </div>
                 </nav>
             </div>
@@ -143,8 +147,8 @@
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0">
-                            <a href="" class="nav-item nav-link">Login</a>
-                            <a href="" class="nav-item nav-link">Register</a>
+                            <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#loginModal">Login</a>
+                            <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">Register</a>
                         </div>
                     </div>
                 </nav>
@@ -185,7 +189,76 @@
             </div>
         </div>
     </div>
+    <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                    </div>
+                    <button type="submit" class="btn" style="background-color: #ffc107; color: white; border: none;">Login</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="submit" class="btn" style="background-color: #ffc107; color: white; border: none;">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Navbar End -->
+     
 
 
     <!-- Featured Start -->
@@ -221,7 +294,7 @@
 
 
     <!-- Categories Start -->
-    <div class="container-fluid pt-5">
+    <div id="silk-saree-section" class="container-fluid pt-5">
         <div class="row px-xl-5 pb-3">
             <div class="col-lg-4 col-md-6 pb-1">
                 <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
@@ -231,18 +304,18 @@
                     </a>
                     <h5 class="font-weight-semi-bold m-0">Silk Saree</h5>
                 </div>
-            </div>
+            </div>    
             <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
+                <div id="soft-silk-section" class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                     <!-- <p class="text-right">15 Prod</p> -->
-                    <a href="Soft-Silk-Saree.html" class="cat-img position-relative overflow-hidden mb-3">
+                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
                         <img class="img-fluid" src="img/softsilk.jpeg" alt="" style="width: 500px;height: 322px;">
-                    </a>                    
+                    </a>
                     <h5 class="font-weight-semi-bold m-0">Soft Silk Saree</h5>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
+                <div id="cotton-saree-section"class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                     <!-- <p class="text-right">15 Products</p> -->
                     <a href="Cotton-Saree.html" class="cat-img position-relative overflow-hidden mb-3">
                         <img class="img-fluid" src="img/cotton saree.png" alt="">
@@ -250,7 +323,7 @@
                     <h5 class="font-weight-semi-bold m-0">Cotton Saree</h5>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 pb-1">
+            <div id="banarasi-saree-section"class="col-lg-4 col-md-6 pb-1">
                 <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                     <!-- <p class="text-right">15 Products</p> -->
                     <a href="Banarasi-Saree.html" class="cat-img position-relative overflow-hidden mb-3">
@@ -259,7 +332,7 @@
                     <h5 class="font-weight-semi-bold m-0">Banarasi Saree</h5>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 pb-1">
+            <div id="Mysore-Silk-Saree-section"class="col-lg-4 col-md-6 pb-1">
                 <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                     <!-- <p class="text-right">15 Products</p> -->
                     <a href="mysore-silk.html" class="cat-img position-relative overflow-hidden mb-3">
@@ -268,7 +341,7 @@
                     <h5 class="font-weight-semi-bold m-0">Mysore Silk Saree</h5>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 pb-1">
+            <div id="Kanjivaram-Saree-section"class="col-lg-4 col-md-6 pb-1">
                 <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                     <!-- <p class="text-right">15 Products</p> -->
                     <a href="kanjivaram-silk.html" class="cat-img position-relative overflow-hidden mb-3">
@@ -277,7 +350,7 @@
                     <h5 class="font-weight-semi-bold m-0">Kanjivaram Saree</h5>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 pb-1">
+            <div id="Chiffon-Saree-section"class="col-lg-4 col-md-6 pb-1">
                 <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                     <!-- <p class="text-right">15 Products</p> -->
                     <a href="Chiffon-Saree.html" class="cat-img position-relative overflow-hidden mb-3">
@@ -286,13 +359,13 @@
                     <h5 class="font-weight-semi-bold m-0">Chiffon Saree</h5>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 pb-1">
+            <div id="Kanjiparam-Saree-section"class="col-lg-4 col-md-6 pb-1">
                 <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                     <!-- <p class="text-right">15 Products</p> -->
                     <a href="kanjipuram-saree.html" class="cat-img position-relative overflow-hidden mb-3">
                         <img class="img-fluid" src="img/kanjipuram saree.png" alt="" style="width: 500px;height: 322px;">
                     </a>
-                    <h5 class="font-weight-semi-bold m-0">kanchipuram Saree</h5>
+                    <h5 class="font-weight-semi-bold m-0">Kanjivaram Saree</h5>
                 </div>
             </div>
         </div>
